@@ -1,7 +1,7 @@
 <template>
   <div class="CV container">
     <h1 class="page-header">CV</h1>
-
+{{myMethd()}}
   </div>
 </template>
 
@@ -19,7 +19,22 @@ export default {
     }
   },
   methods: {
+        myMethd : function(){
+          axios.post('http://localhost/slimapi/users/getCV', null, {
+                  method: 'post',
+                  params: {
+                        token: localStorage.getItem('user-token')
+                  }
+                })
+                .then(function (response){
+                    // alert(`Account Logged in ${this.signin.email}`);
+                    // this.$router.go({ path: this.$router.path });  
+                    console.log(response.data);
+                })
+        },
         CV(e){
+           
+                    console.log(123);
             // if(!this.signin.email || !this.signin.password){
             //     alert('Please fill in all required fields');
             // } else {
@@ -29,7 +44,7 @@ export default {
                 axios.post('http://localhost/slimapi/users/getCV', null, {
                   method: 'post',
                   params: {
-                        token:this.$route.query.token
+                        token:localStorage.getItem('user-token')
                   }
                 })
                 .then(function (response){
