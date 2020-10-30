@@ -1,0 +1,22 @@
+﻿<table border="1">
+									<thead>
+										<tr>
+										<th>#</th>
+											<th>Name</th>
+											<th>Email</th>
+											<th>Gender</th>
+											<th>Phone</th>
+											<th>Designation</th>
+										</tr>
+									</thead>
+
+  
+<tr>  
+<td>1</td> 
+<td>Rakhat</td> 
+<td>rahat_tkd@mail.ru</td> 
+<td>Male</td> 
+<td>77078891693</td> 
+<td>Kazakh</td> 					
+</tr>  
+</table>
